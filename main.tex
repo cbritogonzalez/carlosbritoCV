@@ -1,0 +1,189 @@
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Carlos Brito} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{\underline{\href{mailto:your@email.com}{\raisebox{-0.05\height}{\faEnvelope} carlos.britog25@gmail.com}} $|$}
+% \textcolor[HTML]{371e77}{\underline{\href{mailto:your@anotheremail.com}{\raisebox{-0.05\height}{\faEnvelope} your@anotheremail.com}} $|$}
+\textcolor[HTML]{371e77}{\href{tel:+525513219900}{\raisebox{-0.05\height}{\faMobile} +31 616643165}}
+
+\textcolor[HTML]{371e77}{\underline{\href{https://github.com/yours}{\raisebox{-0.05\height}{\faGithub} github.com/yours}} $|$}
+\textcolor[HTML]{371e77}{\underline{\href{https://linkedin.com/in/yours}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/yours}}}
+\end{tabularx}
+
+%Experience
+\section{Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{\href{https://www.kriptos.io/en/home}{Kriptos}}} \hfill \color[HTML]{371e77} July 2020 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Junior Software Engineer}}\ \hfill \color[HTML]{4B28A4} \\ \textit{Python, Git, GitHub, AWS Products, Javascript, Docker, MongoDB, PostgreSQL, Kubernetes} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Development of backend services using Python for the web platform of the product.
+        \item Development of Docker images for the backend services used in Kubernetes Clusters.
+        \item Maintenance and improvement of the various SQL and No SQL databases.
+        \item Development of the infrastructure of the product in a cloud environment (Amazon Web Services and Microsoft Azure).
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{\href{https://www.wefitter.com/en-us/}{Wefitter - Groningen, The Netherlands}}} \hfill \color[HTML]{371e77} November 2023 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer Intern}}\ \hfill \color[HTML]{4B28A4} \textit{Python, Django, Docker, Docker-Compose, Pytest} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Development of a software maintenance project
+        \item Improved the onboarding process by providing maintenance to the dockerfile and the docker-compose
+        \item Created unit tests to ensure that the local environment is deployed and ready
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{\href{https://www.unl.edu/}{University of Nebraska-Lincoln}}} \hfill \color[HTML]{371e77} June 2019 - August 2019 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Research Intern}}\ \hfill \color[HTML]{4B28A4} \textit{C, 5g technologies, Wireless networks} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Development of a research internship involving the OpenAirInterface 
+        \item Developed a project using 5G for the Ecuadorean environment
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{\href{https://www.fit-bank.com/}{Softwarehouse S.A.}}} \hfill \color[HTML]{371e77} June 2018 - August 2018 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Development Intern}}\ \hfill \color[HTML]{4B28A4} \textit{Ionic, Javascript, HTML, CSS} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Development of a Progressive Web App (PWA) for banking purposes with online and offline capabilities.
+        \item Development of the PWA in the Ionic framework (HTML, CSS, Javascript)
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+
+% Education
+\section{Education}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{University of Groningen (RUG)}} \hfill  \color[HTML]{371e77} Expected graduation date: Feb. 2025 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Msc. in Computing Science, Software Engineering and Distributed Systems (track)}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Relevant Courses: Software Architecture, Advanced Software Architecture, Scalable Computing, Software Maintenance and Evolution, Cloud Computing and Cloud-based Applications, Information Systems
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{Yachay Tech University}} \hfill \color[HTML]{371e77} April 2015 - February 2020 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{5-year Information Technology Engineering Degree}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item During my bachelors I obtained the honor of \textit{cum laude} with a grade of 9/10.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% Projects
+\section{Projects}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/}{Personal Profile page}}} \hfill \color[HTML]{371e77} Dec. 2023 - Ongoing \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Personalized profile page }} \hfill \color[HTML]{4B28A4} \textit{Git, Vue, Javascript, HTML, CSS} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item This project was developed with the objective of practicing the Vue framework, it provides a simple interface that displays my information
+        \item This web site has also been integrated with
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/}{AIWay}}} \hfill \color[HTML]{371e77} Sep. 2022 \\[4pt]
+% \color[HTML]{371e77}\textbf{\textit{HACKMTY project to create reports and represent them on a map}} \hfill \color[HTML]{4B28A4} \textit{Python, JavaScript, HTML, Django, Git} \\[5pt]
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+%         \item Developed a real-time traffic and security alert visualization crowdsourced web page using Google Maps API, featuring heat maps for data representation.
+%         \item Led the back-end team using Python and Django to build a WhatsApp bot with Twilio. The bot proccessed user reports with OpenAI's GPT-3 API for classification of relevant information.
+%     \end{itemize}
+%     \end{minipage}
+% \end{tabularx}
+
+\section{Skills and Interests}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{Skills:} Python, Docker, Git, AWS Products, Teamwork, Communication, Javascript, SQL and NoSQL Databases, Unit Testing
+        \item \textbf{Interests:} Programming, reading, road trips, music, gym
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% \section{Skills}
+% \color[HTML]{1C033C}\textbf{Languages:} \\[2pt]
+% \color[HTML]{371e77} \hspace*{4ex} Python, PHP, C++, SQL, HTML, JavaScript, Bash, Go\\[3pt]
+% \color[HTML]{1C033C}\textbf{Technologies \& Tools:} \\[2pt]
+% \color[HTML]{371e77} \hspace*{4ex} Flask, Django, Git, Linux, Docker, CI/CD\\[3pt]
+% \color[HTML]{1C033C}\textbf{Certifications:} \\[2pt]
+% \color[HTML]{371e77} \hspace*{4ex} \uline{\href{https://learn.microsoft.com/}{Microsoft SC-900 Certified: Security, Compliance, and Identity Fundamentals}}.
+\end{document}
